@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import Createpost from './components/Createpost';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* react routerをインストールし、ルーティングの設定を行う */}
+    <BrowserRouter>
+    {/* 全ページにNavbarコンポーネントを読み込む */}
+    <Navbar />
+      <Routes>
+        <Route path='/' element={ <Home />}/>
+        {/* 例：/createpostページにアクセスしたら、Createpostコンポーネントを表示 */}
+        <Route path='/createpost' element={ <Createpost />}/>
+        <Route path='/login' element={ <Login />}/>
+        <Route path='/logout' element={ <Logout />}/>
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 

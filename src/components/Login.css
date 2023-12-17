@@ -1,0 +1,22 @@
+section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+p {
+    margin-bottom: 16px;
+}
+button {
+    font-size: 20px;
+    padding: 8px 60px;
+    background-color: rgb(216, 203, 242);
+    border: none;
+    box-shadow: 1px 1px 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: none;
+    transition: all .3s;
+    transform: translate(2px, 2px);
+}
