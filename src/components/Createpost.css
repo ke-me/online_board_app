@@ -1,0 +1,33 @@
+.postContent {
+    width: 400px;
+    margin: auto;
+    max-width: 90%;
+}
+
+.date {
+    text-align: start;
+    margin-bottom: 8px;
+}
+
+.date span {
+    width: 70px;
+    display: inline-block;
+}
+
+.txt {
+width: 100%;
+min-height: 100px;
+margin-bottom: 40px;
+}
+
+.postBtn {
+    font-size: 20px;
+    padding: 8px 0;
+    display: block;
+    width: 200px;
+    margin: auto;
+    background-color: rgb(216, 203, 242);
+    border: none;
+    box-shadow: 1px 1px 5px;
+    cursor: pointer;
+}

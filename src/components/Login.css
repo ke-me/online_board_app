@@ -1,14 +1,16 @@
-section {
+.loginContent {
     text-align: center;
-    padding: 40px 0;
 }
 
 p {
     margin-bottom: 16px;
 }
-button {
+.loginBtn {
     font-size: 20px;
-    padding: 8px 60px;
+    padding: 8px 0;
+    display: block;
+    width: 200px;
+    margin: auto;
     background-color: rgb(216, 203, 242);
     border: none;
     box-shadow: 1px 1px 5px;
