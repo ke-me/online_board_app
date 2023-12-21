@@ -10,8 +10,26 @@
 }
 
 .date span {
-    width: 70px;
+    width: 88px;
     display: inline-block;
+}
+
+.nameWrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.yourname {
+    color: #848484;
+    white-space: nowrap;
+    font-size: 14px;
+    margin: 0;
+    margin-right: 6px;
+}
+
+.name {
+    width: 100%;
 }
 
 .txt {

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import "./Home.css";
-import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
+import { deleteDoc, doc, collection, getDocs } from 'firebase/firestore';
 import { auth, db } from '../firebase';
 
 const Home = () => {
+  
   const [postList, setPostList] = useState([]);
 
   useEffect (() => {
@@ -24,6 +25,7 @@ const Home = () => {
     getPost();
   }, []);
 
+
   const postDelete = async (id) => {
     await deleteDoc(doc(db, "post", id));
     window.location.href = "/";
@@ -37,7 +39,7 @@ const Home = () => {
           <span className='user'>@{post.author.username}</span>
           <p className='postText'>{post.postText}</p>
           <div className='postItemFoot'>
-            <div className='postTime'>３時間前</div>
+            <div className='postTime'>{post.date}  {post.time}</div>
             {post.author.id === auth.currentUser?.uid && (
             <button className='deleteBtn' onClick={() => {postDelete(post.id)}}>削除</button>
             )}

@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   // ローカルストレージの値を取得する
-  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));  
 
   return (
     <>

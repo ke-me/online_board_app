@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import "./Createpost.css";
 import { addDoc, collection } from 'firebase/firestore';
 import { auth, db } from '../firebase';
+import { postList } from './Home';
 
-const Createpost = ({ isAuth }) => {
+const Createpost = ({ isAuth, postList }) => {
   const navigate = useNavigate();
 
   const [postText, setPostText] = useState();
+  const [userName, setUserName] = useState();
 
   // ログインしてない場合は、ログインページにリダイレクトする
   useEffect(() => {
@@ -44,7 +46,8 @@ const Createpost = ({ isAuth }) => {
       date: date,
       time: time,
       author: {
-        username: auth.currentUser.displayName,
+        // username: auth.currentUser.displayName,
+        username: userName,
         id: auth.currentUser.uid,
       }
     });
@@ -55,7 +58,11 @@ const Createpost = ({ isAuth }) => {
   return (
     <section className='postContent'>
       <h1>投稿ページ</h1>
-      <div className='date'><span>{time}</span> {date}</div>
+      <div className='date'><span>{date}</span> {time}</div>
+      <div className='nameWrap'>
+        <p className='yourname'>your name :</p>
+      <input type='text' className='name' defaultValue={auth.currentUser.displayName} onChange={(e) => setUserName(e.target.value)}></input>
+        </div>
       <textarea  className='txt' onChange={(e) => setPostText(e.target.value)}></textarea>
       <button onClick={handlePost} className='postBtn'>投稿する</button>
     </section>
