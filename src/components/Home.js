@@ -33,7 +33,7 @@ const Home = () => {
     <>
     {postList.map((post) => {
       return (
-        <section className='postItem'>
+        <section className='postItem' key={post.id}>
           <span className='user'>@{post.author.username}</span>
           <p className='postText'>{post.postText}</p>
           <div className='postItemFoot'>

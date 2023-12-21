@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/online_board_app/static/css/main.52962734.css",
-    "main.js": "/online_board_app/static/js/main.6f3cacac.js",
+    "main.js": "/online_board_app/static/js/main.75c520c5.js",
     "index.html": "/online_board_app/index.html",
     "main.52962734.css.map": "/online_board_app/static/css/main.52962734.css.map",
-    "main.6f3cacac.js.map": "/online_board_app/static/js/main.6f3cacac.js.map"
+    "main.75c520c5.js.map": "/online_board_app/static/js/main.75c520c5.js.map"
   },
   "entrypoints": [
     "static/css/main.52962734.css",
-    "static/js/main.6f3cacac.js"
+    "static/js/main.75c520c5.js"
   ]
 }
